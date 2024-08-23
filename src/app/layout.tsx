@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "700", "300", "500", "600"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
