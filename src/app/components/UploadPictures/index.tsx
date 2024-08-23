@@ -17,11 +17,12 @@ const UploadPictures = () => {
   return (
     <div className="mx-auto w-3/4">
       <div className="lg:text-2xl text-md">
-        <p className="text-center"> Calling All Photographers!!!</p>
+        <p className="text-center font-bold underline"> Snap It, Share It, Love It!!!</p>
         <p className="text-center">
-          Whether it&apos;s a candid shot or a silly pose, We&apos;ll love to see it all.{" "}
+        Capture the magic, whether it&apos;s a spontaneous moment <br /> or a goofy grin. <br /> Share your favorite wedding snapshots here and help us treasure the memories forever!
+          {/* Whether it&apos;s a candid shot or a silly pose, We&apos;ll love to see it all.{" "}
           <br /> Upload the best wedding snapshots here and be a part of our
-          forever memories
+          forever memories */}
         </p>
         <div className="flex justify-center z-30">
           <button
