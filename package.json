@@ -10,9 +10,13 @@
   },
   "dependencies": {
     "firebase": "^10.13.0",
+    "formidable": "^3.5.1",
+    "formidable-serverless": "^1.1.1",
+    "nanoid": "^5.0.7",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",

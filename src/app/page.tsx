@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import UploadPictures from "./components/UploadPictures";
 
@@ -12,7 +11,7 @@ export default function Home() {
       <div className="z-10">
         <div className="text-white">
           {start ? (
-            <UploadPictures />
+            <UploadPictures setStart={setStart} />
           ) : (
             <>
               <button
