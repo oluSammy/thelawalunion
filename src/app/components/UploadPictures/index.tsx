@@ -130,7 +130,7 @@ const UploadPictures = ({
         <p className="text-center">
           Capture the magic, whether it&apos;s a spontaneous moment <br /> or a
           goofy grin. <br /> Share your favorite wedding snapshots here and help
-          us treasure the memories forever!
+          us treasure the memories forever
         </p>
         <div className="flex justify-center z-30">
           <button
