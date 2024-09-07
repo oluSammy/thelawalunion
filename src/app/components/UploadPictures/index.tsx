@@ -145,7 +145,7 @@ const UploadPictures = ({
             ref={hiddenFileInput}
             style={{ display: "none" }}
             multiple
-            accept="image/*"
+            accept="image/* video/* .HEIC .heic"
           />
         </div>
       </div>

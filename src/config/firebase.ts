@@ -15,18 +15,6 @@ const firebaseConfig = {
     measurementId: "G-13TJ2LQ35X"
 };
 
-/**
- const firebaseConfig = {
-  apiKey: "AIzaSyCABT_M4N1nKem747Nr5123JmSiSzEsGeo",
-  authDomain: "thelawalunion-e079f.firebaseapp.com",
-  projectId: "thelawalunion-e079f",
-  storageBucket: "thelawalunion-e079f.appspot.com",
-  messagingSenderId: "811432008736",
-  appId: "1:811432008736:web:75ad12de8036250be27045",
-  measurementId: "G-3X9R8DPDM8"
-};
- */
-
 // Initialize Firebase
 let app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
