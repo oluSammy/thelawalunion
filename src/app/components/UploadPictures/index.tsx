@@ -29,6 +29,8 @@ const UploadPictures = ({
     hiddenFileInput?.current?.click();
   };
 
+  const maxFileSizeInBytes = 200 * 1024 * 1024;
+
   const handleChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
 
@@ -38,8 +40,9 @@ const UploadPictures = ({
 
       const uploadProgressArray = new Array(allFiles.length).fill(0); // Track progress of each file
 
-      const uploadPromises: Promise<UploadProgress>[] = allFiles.map(
-        (file, index) => {
+      const uploadPromises: Promise<UploadProgress>[] = allFiles
+        .filter((file) => file.size <= maxFileSizeInBytes)
+        .map((file, index) => {
           const storageRef = ref(storage, `the-lawal-union/${nanoid()}`);
           const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -78,8 +81,7 @@ const UploadPictures = ({
               }
             );
           });
-        }
-      );
+        });
 
       setShowProgress(true);
       await Promise.allSettled(uploadPromises);
@@ -137,7 +139,7 @@ const UploadPictures = ({
             className="bg-white text-black px-8 py-2 lg:px-12 mt-4 rounded-md font-bold lg:py-4"
             onClick={handleClick}
           >
-            Select Photos
+            Select Photos / videos
           </button>
           <input
             type="file"
